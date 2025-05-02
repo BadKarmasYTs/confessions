@@ -1,0 +1,102 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+
+.confession {
+  background: #f8fafc;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.confession .upvote, .confession .downvote {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.confession .upvote:hover, .confession .downvote:hover {
+  color: #3b82f6;
+  transform: scale(1.2);
+}
+
+.confession .upvote:active, .confession .downvote:active {
+  transform: scale(0.9);
+}
+
+.emoji-picker {
+  margin-top: 10px;
+}
+
+.emoji {
+  font-size: 24px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.emoji:hover {
+  transform: scale(1.2);
+}
+
+.confession .heart, .confession .star {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.confession .heart:hover, .confession .star:hover {
+  transform: scale(1.2);
+  color: #ff4081;
+}
