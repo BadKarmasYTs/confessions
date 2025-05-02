@@ -11,6 +11,16 @@
   <div class="container">
     <h1>Anonymous Confession Wall</h1>
     <p id="confessionCounter">Total Confessions: 0</p>
+    
+    <div class="user-input">
+      <input type="text" id="nickname" placeholder="Enter a nickname (optional)" />
+      <select id="category">
+        <option value="Funny">Funny</option>
+        <option value="Embarrassing">Embarrassing</option>
+        <option value="Deep Thoughts">Deep Thoughts</option>
+      </select>
+    </div>
+
     <textarea id="confessionInput" placeholder="Type your confession here..." rows="4" cols="50"></textarea>
     <button onclick="postConfession()">Post Confession</button>
 
@@ -20,6 +30,8 @@
       <span class="emoji" onclick="addEmoji('😭')">😭</span>
       <span class="emoji" onclick="addEmoji('😎')">😎</span>
     </div>
+
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
 
     <div id="confessionsList"></div>
   </div>
